@@ -11,6 +11,7 @@ public class Controls_new : MonoBehaviour
     public float jumppower = 2500f;
     public float sprintingMultiplicator = 2;
     public bool isInAir = false;
+    public bool isOnRecord;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +91,15 @@ public class Controls_new : MonoBehaviour
 
             }
 
+        }
+    }
+
+
+    public void log(string methodName, bool isOnRecord)
+    {
+        if (isOnRecord)
+        {
+            Record.
         }
     }
     //this class was brought to you by your russian mate
