@@ -177,5 +177,33 @@ public class Controls_new : MonoBehaviour
     public void replay()
     {
         ArrayList calledMethods = Record.methodCalls;
+
+        bool isAMethodCall = false;
+        foreach (int i in calledMethods)
+        {
+            if (!isAMethodCall)
+            {
+                isAMethodCall = true;
+                System.Threading.Thread.Sleep(i);
+            }
+            else
+            {
+                isAMethodCall = false;
+                if (i == 0)
+                {
+                    sprint();
+                }
+                else if (i == 1) Key_W();
+                else if (i == 2) Key_S();
+                else if (i == 3) Key_A();
+                else if (i == 4) Key_D();
+                else if (i == 5) jump();
+
+            }
+        }
+
+
+
+
     }
 }

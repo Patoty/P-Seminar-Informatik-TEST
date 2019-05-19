@@ -7,7 +7,7 @@ public class Record : MonoBehaviour
 {
     //static so that the Replay script can reference it, I'm too stupid to find a better solution somewhat fast
     public static ArrayList methodCalls; //The index of the called methods will be saved here
-    public string[] methodNames = {
+    public static string[] methodNames = {
         "sprint", "Key_W", "Key_S", "Key_A", "Key_D", "jump"
     };
     public Stopwatch temporaryInterval = new Stopwatch();
