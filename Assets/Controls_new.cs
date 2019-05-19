@@ -11,7 +11,7 @@ public class Controls_new : MonoBehaviour
     public float jumppower = 2500f;
     public float sprintingMultiplicator = 2;
     public bool isInAir = false;
-    private bool isOnRecord;
+    public bool isOnRecord;
     public Record record;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Controls_new : MonoBehaviour
         turnspeed = 100f;
         speed = 5f;
         //why is it initiated twice?? doesn't make that much sense??
-        
+        record = GetComponent<Record>();
 
     }
 
@@ -87,6 +87,19 @@ public class Controls_new : MonoBehaviour
 
     }
 
+    void Key_F()
+    {
+        if (!isOnRecord)
+        {
+            isOnRecord = true;
+        }
+        else
+        {
+            record.replay();
+        }
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -122,6 +135,10 @@ public class Controls_new : MonoBehaviour
             }
 
         }
+        if (Input.GetKey("f"))
+        {
+            Key_F();
+        }
     }
 
 
@@ -130,6 +147,7 @@ public class Controls_new : MonoBehaviour
         if (isOnRecord)
         {
             record.add(methodName);
+            Debug.Log("Added: " + methodName);
         }
        
     }

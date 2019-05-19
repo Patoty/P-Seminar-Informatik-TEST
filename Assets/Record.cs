@@ -6,20 +6,20 @@ using UnityEngine;
 public class Record : MonoBehaviour
 {
 
-    private ArrayList methodCalls; //The index of the called methods will be saved here
-    private Time intervalBetweenKeyPress;
-    private string[] methodNames = {
+    public ArrayList methodCalls; //The index of the called methods will be saved here
+    public Time intervalBetweenKeyPress;
+    public string[] methodNames = {
         "sprint", "Key_W", "Key_S", "Key_A", "Key_D", "jump"
     };
-    private Stopwatch temporaryInterval;
-    private Vector3 initialPlayerPosition;
+    public Stopwatch temporaryInterval = new Stopwatch();
+    public Vector3 initialPlayerPosition;
 
    
     
     // Start is called before the first frame update
     void Start()
     {
-        temporaryInterval = new Stopwatch();
+        methodCalls = new ArrayList();
         temporaryInterval.Start();
     }
 
@@ -50,8 +50,8 @@ public class Record : MonoBehaviour
                  * 3. save the called method to the methodCalls list
                  * 4. restart the stopwatch
                  */
-                temporaryInterval.Stop(); 
-                System.TimeSpan ts = temporaryInterval.Elapsed;
+                this.temporaryInterval.Stop(); 
+                System.TimeSpan ts = this.temporaryInterval.Elapsed;
                 methodCalls.Add(ts.Duration());
                 methodCalls.Add(i);
                 temporaryInterval.Start();
