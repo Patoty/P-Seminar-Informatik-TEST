@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{2B39FB3D-3ACC-45F2-EAF2-64BCEA622770}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Record.cs">
     <Files>
-      <File FileName="Assets/Controls.cs" Line="10" Column="19" />
-      <File FileName="Assets/Controls_new.cs" Line="102" Column="20" />
+      <File FileName="Assets/Controls_new.cs" Line="30" Column="81" />
       <File FileName="Assets/Feet.cs" Line="21" Column="41" />
       <File FileName="Assets/Look.cs" Line="9" Column="20" />
-      <File FileName="Assets/Record.cs" Line="17" Column="9" />
+      <File FileName="Assets/Record.cs" Line="22" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3acaad03-e98e-4a2e-b7e9-85c323cbbfc4" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

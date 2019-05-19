@@ -12,16 +12,23 @@ public class Controls_new : MonoBehaviour
     public float sprintingMultiplicator = 2;
     public bool isInAir = false;
     public bool isOnRecord;
+    public Record record;
     // Start is called before the first frame update
     void Start()
     {
         //initiate at start of game to prevent weired unity bug (i explain later)
+        // you never explained later
         jumppower = 2500f;
         turnspeed = 100f;
         speed = 5f;
 
     }
+
     //controll Methods:
+    string getMethodName()
+    {
+        return new System.Diagnostics.StackTrace(1).GetFrame(0).GetMethod().Name;
+    }
     public void set_IsInAir(bool fickDichPatt)
     {
         isInAir = fickDichPatt ;
@@ -32,31 +39,38 @@ public class Controls_new : MonoBehaviour
         if (isInAir == true) return true;
         else return false;
     }
-    void sprint()
+    string sprint()
     {
         transform.Translate(Vector3.forward * speed * sprintingMultiplicator * Time.deltaTime);
+        return getMethodName();
     }
-    void Key_W()
+    string Key_W()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        return getMethodName();
     }
-    void Key_S()
+    string Key_S()
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime);
+        return getMethodName();
     }
-    void Key_A()
+    string Key_A()
     {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
+        return getMethodName();
     }
-    void Key_D()
+    string Key_D()
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
+        return getMethodName();
     }
-    void jump()
+    string jump()
     {
         rb.AddForce(0, jumppower, 0);
-        
+        return getMethodName();
+
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -65,27 +79,27 @@ public class Controls_new : MonoBehaviour
             Key_W();
             if (Input.GetKey("left shift"))
             {
-                sprint();
+                log(sprint(), isOnRecord);
 
             }
         }
         if (Input.GetKey("s"))
         {
-            Key_S();
+            log(Key_S(), isOnRecord);
         }
         if (Input.GetKey("a"))
         {
-            Key_A();
+            log(Key_A(), isOnRecord);
         }
         if (Input.GetKey("d"))
         {
-            Key_D();
+            log(Key_D(), isOnRecord);
         }
         if (Input.GetKey("space")) 
         {
             if(!getInAir())
             {
-                jump();
+                log(jump(), isOnRecord);
                 set_IsInAir(true);
                 Debug.Log("i want to jump!");
 
@@ -99,8 +113,9 @@ public class Controls_new : MonoBehaviour
     {
         if (isOnRecord)
         {
-            Record.
+            record.add(methodName);
         }
+       
     }
     //this class was brought to you by your russian mate
 }
