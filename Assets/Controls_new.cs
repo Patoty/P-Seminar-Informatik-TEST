@@ -11,7 +11,7 @@ public class Controls_new : MonoBehaviour
     public float jumppower = 2500f;
     public float sprintingMultiplicator = 2;
     public bool isInAir = false;
-    public bool isOnRecord;
+    private bool isOnRecord;
     public Record record;
     // Start is called before the first frame update
     void Start()
@@ -21,14 +21,30 @@ public class Controls_new : MonoBehaviour
         jumppower = 2500f;
         turnspeed = 100f;
         speed = 5f;
+        //why is it initiated twice?? doesn't make that much sense??
+        
 
     }
 
-    //controll Methods:
+    public void setOnRecord(bool isOnRecord)
+    {
+        if (isOnRecord)
+        {
+            record.setInitialPlayerPosition(transform.localPosition);
+            this.isOnRecord = isOnRecord;
+        }
+        else
+        {
+            this.isOnRecord = isOnRecord;
+        }
+    }
+
     string getMethodName()
     {
         return new System.Diagnostics.StackTrace(1).GetFrame(0).GetMethod().Name;
     }
+
+    //controll Methods:
     public void set_IsInAir(bool fickDichPatt)
     {
         isInAir = fickDichPatt ;
