@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
 public class Controls_new : MonoBehaviour
@@ -12,7 +13,9 @@ public class Controls_new : MonoBehaviour
     public float sprintingMultiplicator = 2;
     public bool isInAir = false;
     public bool isOnRecord;
+    public bool isOnReplay;
     public Record record;
+    public static bool globalIsOnRecord;
     // Start is called before the first frame update
     void Start()
     {
@@ -92,12 +95,20 @@ public class Controls_new : MonoBehaviour
         if (!isOnRecord)
         {
             isOnRecord = true;
+            startRecord();
         }
         else
         {
-            record.replay();
+            if (!isOnReplay)
+            {
+                record.replay();
+                this.isOnReplay = true;
+            }
+            else
+            {
+
+            }
         }
-        
     }
 
     // Update is called once per frame
@@ -139,6 +150,11 @@ public class Controls_new : MonoBehaviour
         {
             Key_F();
         }
+
+        if (isOnRecord != globalIsOnRecord)
+        {
+            globalIsOnRecord = isOnRecord;
+        }
     }
 
 
@@ -151,5 +167,15 @@ public class Controls_new : MonoBehaviour
         }
        
     }
+
+    public void startRecord()
+    {
+        Record.methodCalls = new ArrayList();
+        RecordCountdown.startCountdown();
+    }
     //this class was brought to you by your russian mate
+    public void replay()
+    {
+        ArrayList calledMethods = Record.methodCalls;
+    }
 }

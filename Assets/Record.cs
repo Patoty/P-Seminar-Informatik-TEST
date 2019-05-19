@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class Record : MonoBehaviour
 {
-
-    public ArrayList methodCalls; //The index of the called methods will be saved here
-    public Time intervalBetweenKeyPress;
+    //static so that the Replay script can reference it, I'm too stupid to find a better solution somewhat fast
+    public static ArrayList methodCalls; //The index of the called methods will be saved here
     public string[] methodNames = {
         "sprint", "Key_W", "Key_S", "Key_A", "Key_D", "jump"
     };
@@ -63,6 +62,8 @@ public class Record : MonoBehaviour
 
     public void replay()
     {
+        transform.Translate(initialPlayerPosition); //reset Player Position
+        Replay.replay();
 
     }
 

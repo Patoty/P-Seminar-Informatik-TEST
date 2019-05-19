@@ -65,6 +65,8 @@
     <Compile Include="Assets\Feet.cs" />
     <Compile Include="Assets\Look.cs" />
     <Compile Include="Assets\Record.cs" />
+    <Compile Include="Assets\RecordCountdown.cs" />
+    <Compile Include="Assets\Replay.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Patrick/Documents/GitHub/P-Seminar-Informatik-TEST/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
