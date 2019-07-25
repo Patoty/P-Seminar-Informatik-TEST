@@ -30,15 +30,6 @@ public class Record : MonoBehaviour
 
     public void add(string methodName)
     {
-        //switch (methodName)
-        //{
-        //    case methodNames[0]:
-        //        methodCalls.Add(2);
-        //        break;
-        //    case "sneak":
-        //        break;
-
-        //}
         for (int i = 0; i < methodNames.Length; i++)
         {
             if (methodName == methodNames[i])

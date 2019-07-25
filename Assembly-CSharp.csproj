@@ -69,6 +69,7 @@
     <Compile Include="Assets\Look.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
     <Compile Include="Assets\Record.cs" />
+    <Compile Include="Assets\Record_Looks.cs" />
     <Compile Include="Assets\RecordCountdown.cs" />
     <Compile Include="Assets\Replay.cs" />
     <Reference Include="Unity.Timeline.Editor">

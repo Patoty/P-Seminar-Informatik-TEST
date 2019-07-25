@@ -8,8 +8,7 @@ public class Look : MonoBehaviour
     public float sensitivity = 5f;
     //shuggar daddy
     private Transform myBody;
-    //mouse direction = mD
-    private Vector2 mD;
+    private Vector2 mouseDirection;
 
     // Start is called before the first frame update duhh
     void Start()
@@ -18,15 +17,19 @@ public class Look : MonoBehaviour
     }
     void update_camera()
     {
-        //mouse change = mC
         //How much has the mouse moved?
-        Vector2 mC = new Vector2
+        Vector2 mouseChange = new Vector2
             (Input.GetAxisRaw("Mouse X"),
              Input.GetAxisRaw("Mouse Y"));
-        mD += mC;
-        this.transform.localRotation = Quaternion.AngleAxis(-mD.y * sensitivity, Vector3.right);
-        myBody.localRotation = Quaternion.AngleAxis(mD.x * sensitivity, Vector3.up);
-        //I`m too lazy to comment here... it`s a foocking cunt of a wanker mess mate
+        mouseDirection += mouseChange;
+
+	//apply mouse movement to player object
+        this.transform.localRotation = Quaternion.AngleAxis(-mouseDirection.y * sensitivity, Vector3.right);
+
+        myBody.localRotation = Quaternion.AngleAxis(mouseDirection.x * sensitivity, Vector3.up);
+        
+
+	//I`m too lazy to comment here... it`s a foocking cunt of a wanker mess mate
     }
     // Update is called once per frame duh
     void Update()
@@ -34,4 +37,12 @@ public class Look : MonoBehaviour
         update_camera();
     }
     //this class was brought to you by your russian mate
+
+	void log(Vector2 sC){
+		Vector2 saveChanged = sC;
+		
+	}	
 }
+
+//this class is a shit
+
