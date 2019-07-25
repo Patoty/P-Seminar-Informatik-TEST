@@ -1,26 +1,35 @@
 ﻿<Properties StartupConfiguration="{2B39FB3D-3ACC-45F2-EAF2-64BCEA622770}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Controls_new.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RecordCountdown.cs">
     <Files>
-      <File FileName="Assets/Controls_new.cs" Line="52" Column="17" />
-      <File FileName="Assets/Record.cs" Line="21" Column="6" />
-      <File FileName="Assets/Feet.cs" Line="21" Column="41" />
-      <File FileName="Assets/Look.cs" Line="9" Column="20" />
+      <File FileName="Assets/Feet.cs" />
+      <File FileName="Assets/Look.cs" />
+      <File FileName="Assets/Replay.cs" Line="25" Column="40" />
+      <File FileName="Assets/CloneContols.cs" Line="5" Column="37" />
+      <File FileName="Assets/PlayerControls.cs" Line="10" Column="10" />
+      <File FileName="Assets/RecordCountdown.cs" Line="21" Column="18" />
+      <File FileName="Assets/Record.cs" Line="67" Column="1" NotebookId="1" />
+      <File FileName="Assets/Controls.cs" Line="207" Column="2" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="P-Seminar-Informatik-TEST" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Controls_new.cs" selected="True" />
+              <Node name="RecordCountdown.cs" selected="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="P-Seminar-Informatik-TEST" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3acaad03-e98e-4a2e-b7e9-85c323cbbfc4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="44b000ff-d4f4-419b-ba29-7cfcd81fe016" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

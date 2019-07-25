@@ -22,6 +22,6 @@ public class Replay : MonoBehaviour
     }
     public static void replay()
     {
-        controls.replay();
+        controls.replay(calledMethods);
     }
 }

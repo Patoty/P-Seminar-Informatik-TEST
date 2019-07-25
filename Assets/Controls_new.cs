@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 
-public class Controls_new : MonoBehaviour
+public class Controls_new : Controls
 {
     //class is pretty self explanatory
     public Rigidbody rb;
@@ -174,9 +174,10 @@ public class Controls_new : MonoBehaviour
         RecordCountdown.startCountdown();
     }
     //this class was brought to you by your russian mate
-    public void replay()
+
+    public void replay(ArrayList calledMethods)
     {
-        ArrayList calledMethods = Record.methodCalls;
+        //ArrayList calledMethods = Record.methodCalls;
 
         bool isAMethodCall = false;
         foreach (int i in calledMethods)
@@ -201,9 +202,5 @@ public class Controls_new : MonoBehaviour
 
             }
         }
-
-
-
-
     }
 }
