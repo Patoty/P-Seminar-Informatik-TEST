@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerControls : CloneContols
 {
+
+    public string 
+
     // Start is called before the first frame update
     void Start()
     {

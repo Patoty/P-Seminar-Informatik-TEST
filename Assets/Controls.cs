@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Timers;
 
-public abstract class Controls : MonoBehaviour
+public class Controls : MonoBehaviour
 {
 
     //class is pretty self explanatory
